@@ -2,15 +2,14 @@
 body{
     margin: 0;
 }
+html,body,.container{
+    height: 100%;
+    overflow: hidden;
+}
 ul{
     padding: 0;
     margin: 0;
     list-style: none;
-}
-.box{
-    position: relative;
-    width: 600px;
-    height: 300px;
 }
 object{
     height: 100%;
@@ -32,15 +31,11 @@ object{
 }
 
 .left-box{
-    left: 0;
-    top: 0;
-    width: 40px;
-    height: 100%;
+    width: 42px;
     background-color: #F2F2F2;
 }
 .left-btn-list{
     border: 1px solid #ccc;
-    height: 100%;
     overflow: auto;
 }
 .left-btn-list > li{
@@ -54,34 +49,58 @@ object{
 img{
     vertical-align:middle;
 }
-
-.bottom-box{
-    bottom: 0;
-    left: 39px;
-    z-index: 3;
-    height: 100px;
-    width: 100%;
-    box-sizing: border-box;
-    padding-right: 40px;
-}
-.view-list{
+.container{
     font-size: 0;
+    white-space: nowrap;
+}
+.inline{
+    display: inline-block;
+    vertical-align: top;
+}
+.content-box{
+    padding-right: 42px;
+    margin-right: -42px;
+}
+.object-box{
+    padding-bottom: 100px;
+    margin-bottom: -100px;
+}
+.footer-box{
+    height: 100px;
     overflow-x: auto;
     overflow-y: hidden;
-    border: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.view-list{
     background-color: #F2F2F2;
+    padding: 10px;
 }
 .view-list > li{
     display: inline-block;
     vertical-align: top;
-    border-right: 1px solid #ccc;
+    border: 1px solid #ccc;
     width: 120px;
     height: 100%;
-    line-height: 100px;
-    text-align: center;
+    margin-right: 10px;
+    padding: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.view-list img{
+    width: 100%;
+    height: 100%;
 }
 .fit{
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
+}
+.fit-height{
+    height: 100%;
+    box-sizing: border-box;
+}
+.fit-width{
+    width: 100%;
     box-sizing: border-box;
 }

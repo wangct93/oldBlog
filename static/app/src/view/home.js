@@ -6,7 +6,6 @@ import Component from '../lib/component';
 import {Provider, connect} from 'react-redux';
 
 import Search from '../component/search';
-import {HashRouter,Switch,Route,Link,withRouter,Redirect} from 'react-router-dom';
 import MenuItem from '../component/menuItem';
 class Home extends Component{
     render(){
