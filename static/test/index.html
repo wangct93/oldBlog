@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/index.css" rel="stylesheet">
+    <script>
+        $(function(){
+            var player = document.getElementById('webocx');
+            player.onfocus = function(){
+                showView();
+            }
+        })
+        function showView(){
+            var $iframe = $('.object-iframe');
+            var pdt = parseInt($iframe.css('paddingTop'));
+            pdt = isNaN(pdt) ? 0 : pdt;
+            pdt = pdt ? 0 : 1;
+            $iframe.css('padding',pdt + 'px');
+        }
+    </script>
+</head>
+<body>
+<div class="container" id="container">
+    <div class="box">
+        <object id="webocx" classid="CLSID:C1D39A04-BB4A-4324-9F27-00F8D5E1CD38"></object>
+        <div class="left-box iframe-div">
+            <iframe class="object-iframe" frameborder="0"></iframe>
+            <ul class="left-btn-list fit">
+                <li>
+                    <img src="img/1.png">
+                </li>
+                <li>
+                    <img src="img/1.png">
+                </li>
+                <li>
+                    <img src="img/1.png">
+                </li>
+                <li>
+                    <img src="img/1.png">
+                </li>
+            </ul>
+        </div>
+        <div class="bottom-box iframe-div">
+            <iframe class="object-iframe" frameborder="0"></iframe>
+            <ul class="view-list fit">
+                <li>
+                    <img src="img/1.png">
+                </li>
+                <li>
+                    <img src="img/1.png">
+                </li>
+                <li>
+                    <img src="img/1.png">
+                </li>
+                <li>
+                    <img src="img/1.png">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

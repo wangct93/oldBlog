@@ -4,20 +4,24 @@
 let defaultState = {
     list:[
         {
-            title:'首页',
-            path:'/home'
+            iconCls:'icon-shu1',
+            text:'书籍',
+            path:'/index'
         },
         {
-            title:'收藏',
-            path:'/story'
+            iconCls:'icon-quanbu-copy',
+            text:'全部',
+            path:'/kb'
         },
         {
-            title:'博客',
-            path:'/blog'
+            iconCls:'icon-bokeyuan',
+            text:'博客',
+            path:'/bk'
         },
         {
-            title:'作品',
-            path:'/works'
+            iconCls:'icon-shu1',
+            text:'书籍',
+            path:'/self'
         }
     ]
 };
@@ -26,7 +30,7 @@ export let navData = (state = defaultState,action = {}) => {
     state = wt.clone(state);
     wt.execFunc(reducer[action.type],state,action);
     return state;
-}
+};
 
 const reducer = {
 

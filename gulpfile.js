@@ -106,7 +106,7 @@ gulp.task('minCss',function(){
 
 
 // let lessPath = ['./static/react/pages/novel/less/*.less'];
-let lessPath = ['./static/react/less/*.less'];
+let lessPath = ['./static/app/less/*.less'];
 gulp.task('less',() => {
     return gulp.src(lessPath)
         .pipe(plumnber())

@@ -7,32 +7,63 @@ let defaultState = {
     menuList:[
         {
             iconCls:'icon-quanbu-copy',
-            title:'全部',
-            selected:true
+            text:'全部',
+            path:'/p'
         },
         {
             iconCls:'icon-bokeyuan',
-            title:'博客',
-            type:'blog'
+            text:'博客',
+            path:'/p'
         },
         {
             iconCls:'icon-shu1',
-            title:'书籍',
-            type:'book'
-        }
-    ],
-    lbtData:[
-        {
-            src:'./img/1.jpg'
+            text:'书籍',
+            path:'/p'
         },
         {
-            src:'./img/2.jpg'
+            iconCls:'icon-quanbu-copy',
+            text:'全部',
+            path:'/p'
         },
         {
-            src:'./img/3.jpg'
+            iconCls:'icon-bokeyuan',
+            text:'博客',
+            path:'/p'
         },
         {
-            src:'./img/4.jpg'
+            iconCls:'icon-shu1',
+            text:'书籍',
+            path:'/p'
+        },
+        {
+            iconCls:'icon-quanbu-copy',
+            text:'全部',
+            path:'/p'
+        },
+        {
+            iconCls:'icon-bokeyuan',
+            text:'博客',
+            path:'/p'
+        },
+        {
+            iconCls:'icon-shu1',
+            text:'书籍',
+            path:'/p'
+        },
+        {
+            iconCls:'icon-bokeyuan',
+            text:'博客',
+            path:'/p'
+        },
+        {
+            iconCls:'icon-shu1',
+            text:'书籍',
+            path:'/p'
+        },
+        {
+            iconCls:'icon-shu1',
+            text:'全部',
+            path:'/p'
         }
     ]
 };
