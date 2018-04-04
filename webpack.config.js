@@ -9,7 +9,7 @@ let src = 'app/src/index.js';
 // let src = 'react/pages/novel/src/index.js';
 
 module.exports = {
-    mode:'development',      //development:开发模式      production:上线模式
+    mode:'development',      //development:开发模式（可看源代码调试）      production:上线模式
     entry: {
         index:path.resolve(__dirname,'static',src)
     },
@@ -34,11 +34,5 @@ module.exports = {
     plugins: [
         // new webpack.optimize.UglifyJsPlugin(),
         // new HtmlWebpackPlugin({template: './test/index.html'})
-    ],
-    devServer:{
-        contentBase:__dirname,
-        historyApiFallback:true,
-        inline:true,
-        port:9000
-    }
+    ]
 };

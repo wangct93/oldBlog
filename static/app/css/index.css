@@ -66,6 +66,7 @@ a {
   right: 10px;
 }
 .login-btn {
+  display: block;
   background-color: #1c80d5;
   height: 50px;
   line-height: 50px;

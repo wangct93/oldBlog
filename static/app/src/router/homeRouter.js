@@ -10,14 +10,26 @@ import {HashRouter,Switch,Route,Link,withRouter,Redirect} from 'react-router-dom
 
 import Home from '../view/home';
 import MenuItem from '../component/menuItem';
-export default connect(state => state.navData)(props => {
-    let {list} = props;
-    return <HashRouter basename="/home">
+
+import {getUser} from '../compute/compute';
+
+
+export default connect(state => wt.extend({
+    userList:state.userData.list
+},state.navData))(props => {
+    let {list,match,userList} = props;
+    let user = getUser(userList);
+    if(!user){
+        return <Redirect to="/login"/>
+    }
+    return <HashRouter basename={match.url}>
         <div className="main fit">
             <div className="main-content">
                 <Switch>
                     <Route path="/index" component={Home} />
                     <Route path="/kb" component={Home}/>
+                    <Route path="/kb" component={Home}/>
+                    <Route path="/self" component={Home}/>
                     <Redirect to="/index" />
                 </Switch>
             </div>

@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="full-screen" content="yes">
     <title></title>
     <script src="js/jquery.min.js"></script>
+    <link href="../util/css/common.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+    <script>
+        function openFullScreen() {
+            // 判断各种浏览器，找到正确的方法
+            var ele = document.documentElement;
+            var requestMethod = ele.requestFullScreen || //W3C
+                ele.webkitRequestFullScreen ||    //Chrome等
+                ele.mozRequestFullScreen || //FireFox
+                ele.msRequestFullscreen; //IE11
+            if (requestMethod) {
+                requestMethod.call(ele);
+            }
+            else if (typeof window.ActiveXObject !== "undefined") {//for Internet Explorer
+                try{
+                    var wscript = new ActiveXObject("WScript.Shell");
+                    wscript.SendKeys("{F11}");
+                }catch(e){
+                    $.dlg.alertInfo('请先将本站加入信任站点，并允许ActiveX控件交互，再进行全屏操作！');
+                }
+            }
+        }
+        $(function(){
+//            window.open('./2.html','s',`height=${screen.height},width=${screen.width},location=no`)
+            openFullScreen();
+        })
+    </script>
 </head>
 <body>
 <div class="container" id="container">

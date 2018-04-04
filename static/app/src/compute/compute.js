@@ -3,12 +3,6 @@
  */
 
 
-export const getPaging = (data) => {
-    let {params,total} = data;
-    let {num,size} = params;
-    return {
-        pageNum:num,
-        pageSize:size,
-        total
-    }
+export const getUser = (list) => {
+    return list.filter(item => item.logined)[0];
 };
