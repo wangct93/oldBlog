@@ -12,22 +12,20 @@ class Home extends Component{
         let {menuList} = this.props;
         return <div className="home-container">
             <div className="header">
-                <div className="home-top">
-                    <Search />
-                    <div className="icon-btn-box">
-                        <i className="iconfont icon-duihao"></i>
-                        <i className="iconfont icon-duihao"></i>
-                    </div>
+                <Search />
+                <div className="icon-btn-box">
+                    <i className="iconfont icon-duihao"></i>
+                    <i className="iconfont icon-duihao"></i>
                 </div>
-                <div className="menu-box">
+            </div>
+            <div className="body">
+                <div className="menu-box menu-box-blue">
                     {
                         menuList.slice(0,4).map((item,i) => {
                             return <MenuItem data={item} key={i}/>
                         })
                     }
                 </div>
-            </div>
-            <div className="body">
                 <div className="menu-box">
                     {
                         menuList.slice(4).map((item,i) => {
