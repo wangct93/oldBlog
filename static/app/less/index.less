@@ -248,6 +248,9 @@ a{
     height: 100%;
     box-sizing:border-box;
 }
+.block{
+    display: block;
+}
 
 
 .self-box{
@@ -266,46 +269,42 @@ a{
     }
 }
 
-.nav-list{
+.line-list{
     background-color: #fff;
     margin-bottom: 20px;
     border-top: 1px solid @borderColor;
     border-bottom: 1px solid @borderColor;
+    padding: 0 10px;
     > li{
-        > a{
-            display: block;
-            padding-left: 50px;
-            position: relative;
-            outline:none;
-            > .iconfont{
-                position: absolute;
-                left: 10px;
-                top: 50%;
-                margin-top: -15px;
-                font-size: 30px;
-                line-height: 30px;
-            }
-        }
+        border-top: 1px solid @borderColor;
         &:first-child{
-            .item-content{
-                border-top-width: 0;
-            }
+            border-top-width: 0;
         }
-        .item-content{
-            display: flex;
-            align-items:center;
-            border-top: 1px solid @borderColor;
-            padding: 10px 10px 10px 0;
-
-            .item-text{
-                flex: 1 0 auto;
-                text-align: right;
-                margin-right: 5px;
-            }
+    }
+    .block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        line-height: 50px;
+        .iconfont:first-child{
+            font-size: 40px;
+            line-height: 40px;
         }
-
+        .line-title{
+            padding-left: 10px;
+        }
+        .line-text{
+            flex: 1 0 auto;
+            text-align: right;
+            margin-right: 5px;
+        }
         &:active{
             background-color: @borderColor;
         }
     }
+}
+
+.userinfo-body{
+    padding-top: 20px;
 }

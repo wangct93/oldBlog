@@ -231,6 +231,9 @@ a {
   height: 100%;
   box-sizing: border-box;
 }
+.block {
+  display: block;
+}
 .self-box {
   background-color: #1c80d5;
   color: #fff;
@@ -246,40 +249,41 @@ a {
   flex: 1 0 auto;
   margin: 0 20px;
 }
-.nav-list {
+.line-list {
   background-color: #fff;
   margin-bottom: 20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  padding: 0 10px;
 }
-.nav-list > li > a {
-  display: block;
-  padding-left: 50px;
-  position: relative;
-  outline: none;
+.line-list > li {
+  border-top: 1px solid #ccc;
 }
-.nav-list > li > a > .iconfont {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  margin-top: -15px;
-  font-size: 30px;
-  line-height: 30px;
-}
-.nav-list > li:first-child .item-content {
+.line-list > li:first-child {
   border-top-width: 0;
 }
-.nav-list > li .item-content {
+.line-list .block {
   display: flex;
+  justify-content: center;
   align-items: center;
-  border-top: 1px solid #ccc;
-  padding: 10px 10px 10px 0;
+  height: 50px;
+  line-height: 50px;
 }
-.nav-list > li .item-content .item-text {
+.line-list .block .iconfont:first-child {
+  font-size: 40px;
+  line-height: 40px;
+}
+.line-list .block .line-title {
+  padding-left: 10px;
+}
+.line-list .block .line-text {
   flex: 1 0 auto;
   text-align: right;
   margin-right: 5px;
 }
-.nav-list > li:active {
+.line-list .block:active {
   background-color: #ccc;
+}
+.userinfo-body {
+  padding-top: 20px;
 }
